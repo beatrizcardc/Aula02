@@ -3,8 +3,8 @@ import java.util.Scanner;
 public class DesvioEncadeado {
 
 	public static void main(String[] args) {
-		/*Uma ONG resolveu prestar um serviço bem diferente: ela oferece vans para buscar pessoas com qualquer tipo de dificuldade de locomoção para poderem votar.
-		 * Para evitar problemas no momento do embarque, porém, você foi convidado a criar um programa que valide a idade dos passageiros: caso tenham 16 anos ou menos, não podem votar (e nem embarcar). Caso tenham entre 16 anos e 18 incompletos, podem optar por votar ou não. Caso tenham mais de 18 anos, devem votar obrigatoriamente.
+		/*Uma ONG resolveu prestar um serviÃ§o bem diferente: ela oferece vans para buscar pessoas com qualquer tipo de dificuldade de locomoÃ§Ã£o para poderem votar.
+		 * Para evitar problemas no momento do embarque, porÃ©m, vocÃª foi convidado a criar um programa que valide a idade dos passageiros: caso tenham 16 anos ou menos, nÃ£o podem votar (e nem embarcar). Caso tenham entre 16 anos e 18 incompletos, podem optar por votar ou nÃ£o. Caso tenham mais de 18 anos, devem votar obrigatoriamente.
 		 * Crie um programa que receba a idade dos passageiros em potencial e indique se podem embarcar e votar.*/
 		
 		Scanner leitor = new Scanner(System.in);
@@ -12,8 +12,20 @@ public class DesvioEncadeado {
 		System.out.println("Por favor, digite a idade do passageiro.");
 		idade = leitor.nextInt();
 	
-		/*Aqui devemos criar uma solução para realizar as verificações.*/
-		
+		/*Aqui devemos criar uma soluÃ§Ã£o para realizar as verificaÃ§Ãµes.*/
+		if (idade < 16) {
+			//Aqui o que ocorre se a idade for menor do que 16
+			System.out.println("VocÃª nÃ£o pode votar em embarcar");
+		}else {
+			//Aqui Ã© a parte FALSA do primeiro if
+			if (idade > 18) {
+			//Aqui temos a parte VERDADEIRA do segundo if. portanto o que ocorre de tiver mais que 18 anos
+				System.out.println("VocÃª Ã© obrigado a votar");
+			}else {
+				//Aqui temos a parte FALSA do segundo if, se o usuÃ¡rio tiver mais 16 anos porÃ©m menos que 18
+				System.out.println("VocÃª pode optar por votar e embarcar");
+			}
+		}
 		
 	
 		leitor.close();
